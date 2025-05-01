@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stream Controller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<ul id="playlistDisplay"></ul>
+<div id="container">
+  <div id="stripes">
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+
+    <div class="stripe-controls">
+	  <div id="statusLamp"></div>
+		<button class="ctrl-button" id="prevBtn" title="Previous">&#9664;&#9664;</button>  <!-- ◄ -->
+		<button class="ctrl-button" id="playPauseBtn" title="Play/Pause">&#9654;</button> <!-- ► of ⏸ -->
+		<button class="ctrl-button" id="nextBtn" title="Next">&#9654;&#9654;</button>  <!-- ►► -->   
+    </div>
+    <audio id="audio" controls></audio>
+  </div>
+
+  <div id="controls">
+    <div id="knob">
+      <div id="indicator"></div>
+    </div>
+	
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
