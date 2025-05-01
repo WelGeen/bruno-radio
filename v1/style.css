@@ -1,0 +1,150 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial;
+  letter-spacing: 2px;
+  touch-action: none;
+  font-weight: bold;
+  font-size: 0.8vw;
+}
+
+#container {
+  width: 80vw;
+  height: 74vh;
+  background: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 2vmin;
+  box-shadow: 0 0 20px black;
+}
+
+#stripes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50%;
+}
+
+.stripe {
+  width: 35vw;
+  height: 6px;
+  background: black;
+  margin: 5px 0;
+}
+
+.stripe-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#knob {
+  width: 20vw;
+  height: 20vw;
+  max-width: 200px;
+  max-height: 200px;
+  background: #000;
+  border-radius: 50%;
+  cursor: grab;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 0.1s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  touch-action: none;
+}
+
+#indicator {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background: yellow;
+  border-radius: 50%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.ctrl-button {
+  width: 46px;
+  height: 46px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  font-size: 8px;
+}
+audio {
+  width: 35vw;
+  height: 20px;
+  background-color: aliceblue;
+  display: none;
+}
+#statusLamp {
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 50%;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px #000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#statusLamp.off {
+  background-color: red;
+  box-shadow: 0 0 10px red;
+}
+
+#statusLamp.on {
+  background-color: green;
+  box-shadow: 0 0 10px limegreen;
+}
+
+#statusLamp.searching {
+  background-color: white;
+  box-shadow: 0 0 10px gray;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+#statusLamp.talk {
+  background-color: orange;
+  box-shadow: 0 0 10px orange;
+}
+#statusLamp.music {
+  background-color: limegreen;
+  box-shadow: 0 0 10px limegreen;
+}
+#statusLamp.stream {
+  background-color: skyblue;
+  box-shadow: 0 0 10px skyblue;
+}
+

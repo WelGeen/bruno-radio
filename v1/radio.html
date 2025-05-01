@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stream Controller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="container">
+  <div id="stripes">
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+    <div class="stripe"></div>
+
+    <div class="stripe-controls">
+	  <div id="statusLamp"></div>
+      <button class="ctrl-button" id="prevBtn">PREV</button>
+      <button class="ctrl-button" id="nextBtn">NEXT</button>
+      <button class="ctrl-button" id="playPauseBtn">PLAY</button>
+      
+    </div>
+    <audio id="audio" controls></audio>
+  </div>
+
+  <div id="controls">
+    <div id="knob">
+      <div id="indicator"></div>
+    </div>
+	
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
